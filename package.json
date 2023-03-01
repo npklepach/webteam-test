@@ -1,5 +1,4 @@
 {
-  "name": "",
   "version": "1.0.0",
   "license": "MIT",
   "dependencies": {
@@ -36,8 +35,8 @@
     "webpack": "^4.30.0"
   },
   "scripts": {
-    "start": "cross-env NODE_ENV=development webpack-dev-server --port 5050",
-    "build": "cross-env NODE_ENV=production webpack -p --bail"
+    "start": "cross-env NODE_ENV=development NODE_OPTIONS='--openssl-legacy-provider' webpack-dev-server --port 5050",
+    "build": "cross-env NODE_ENV=production NODE_OPTIONS='--openssl-legacy-provider' webpack -p --bail"
   },
   "devDependencies": {
     "webpack-cli": "^3.3.2",
