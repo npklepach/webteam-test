@@ -1,19 +1,448 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
-    <title>Landing</title>
+        <title>Landing</title>
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-</head>
-<body>
-    <div class="wt-container">
-        <div class="wt-row wt-row_size_m wt-row_justify_center wt-offset-top-96">
-            <div class="wt-col-inline text-1 text-1_theme_dark">
-                    Landing page
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" href="app/exterrnal-libs/layout/layout-without-css-vars.css">
+        <link rel="stylesheet" href="app/exterrnal-libs/layout/index.css">
+        <link rel="stylesheet" href="app/exterrnal-libs/breakpoints/index.css">
+    </head>
+    <body class="landing">
+        <div class="n-site-menu">
+            <div class="wt-container">
+                <div class="wt-row wt-row_size_m wt-row_align-items_center">
+                    <div class="wt-col-auto-fill">
+                        <a href="//jetbrains.com/all/">
+                            <span class="n-menu-title">Toolbox</span>
+                        </a>
+                    </div>
+                    <div class="wt-col-inline">
+                        <a href="//jetbrains.com/all/" class="n-menu-active">Overview</a>
+                    </div>
+                    <div class="wt-col-inline">
+                        <a href="//jetbrains.com/toolbox-app/" class="n-menu-element">Toolbox App</a>
+                    </div>
+                    <div class="wt-col-inline">
+                        <a href="//jetbrains.com/store/" type="button" class="n-menu-button">Buy Now</a>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
-</body>
+        <div class="page-content">
+            <div class="overview-content">
+                <div class="wt-section">
+                    <div class="wt-container">
+                        <div class="wt-row wt-row_size_m wt-offset-top-48">
+                            <div class="wt-col-6">
+                                <img src="//jetbrains.com/all/img/img-1.png" alt="IMG 1">
+                            </div>
+                            <div class="wt-col-6">
+                                <h1>All Products Pack</h1>
+                                <h2 class="wt-offset-top-24 n-subtitle">
+                                    The complete full-stack
+                                    <br>
+                                    developer toolkit
+                                </h2>
+                                <a href="//jetbrains.com/toolbox-app/download/download-thanks.html" type="button" class="wt-offset-top-48 n-button">
+                                    I Want It All
+                                </a>
+                                <p class="wt-offset-top-24 n-text-2">An upgrade and switch option available</p>
+                            </div>
+                        </div>
+                        <div class="wt-row wt-row_size_m wt-offset-top-24">
+                            <div class="wt-col-6 wt-offset-left-6 n-text-1">
+                                Get access to all JetBrains desktop tools including 10 IDEs, 2 extensions and 3 profiles
+                            </div>
+                        </div>
+                        <div class="wt-row wt-row_size_m">
+                            <h2 class="wt-col-12">10 IDEs</h2>
+                        </div>
+                        <div class="wt-row wt-row_size_m wt-offset-top-12">
+                            <div class="wt-col-6">
+                                <div class="wt-row wt-row_size_m">
+                                    <!--10 icons-->
+                                </div>
+                            </div>
+                            <div class="wt-col-6">
+                                <div class="wt-row wt-row_size_m">
+                                    <div class="wt-col-inline">
+                                        <div class="wt-row wt-row_size_m wt-row_direction_column">
+                                            <div class="wt-col-auto-fill">
+                                                <a href="//jetbrains.com/idea/">IntelliJ IDEA Ultimate</a>
+                                                <div class="wt-row wt-row_size_s">
+                                                    <div class="wt-col-inline">Kotlin</div>
+                                                    <div class="wt-col-inline">Java</div>
+                                                </div>
+                                            </div>
+                                            <div class="wt-col-auto-fill">
+                                                <a href="//jetbrains.com/rider/">Rider</a>
+                                                <div class="wt-row wt-row_size_s">
+                                                    <div class="wt-col-inline">C#</div>
+                                                    <div class="wt-col-inline">.NET</div>
+                                                </div>
+                                            </div>
+                                            <div class="wt-col-auto-fill">
+                                                <a href="//jetbrains.com/resharper/">ReSharper Ultimate</a>
+                                                <div class="wt-row wt-row_size_s">
+                                                    <div class="wt-col-inline">C++</div>
+                                                </div>
+                                            </div>
+                                            <div class="wt-col-auto-fill">
+                                                <a href="//jetbrains.com/datagrip/">DataGrip</a>
+                                                <div class="wt-row wt-row_size_s">
+                                                    <div class="wt-col-inline">C</div>
+                                                </div>
+                                            </div>
+                                            <div class="wt-col-auto-fill">
+                                                <a href="//jetbrains.com/phpstorm/">PhpStorm</a>
+                                                <div class="wt-row wt-row_size_s">
+                                                    <div class="wt-col-inline">mysql</div>
+                                                    <div class="wt-col-inline">database</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="wt-col-inline">
+                                        <div class="wt-row wt-row_size_m wt-row_direction_column">
+                                            <div class="wt-col-auto-fill">
+                                                <a href="//jetbrains.com/webstorm/">WebStorm</a>
+                                                <div class="wt-row wt-row_size_s">
+                                                    <div class="wt-col-inline">mysql</div>
+                                                </div>
+                                            </div>
+                                            <div class="wt-col-auto-fill">
+                                                <a href="//jetbrains.com/ruby/">RubyMine</a>
+                                                <div class="wt-row wt-row_size_s">
+                                                    <div class="wt-col-inline">Ruby</div>
+                                                </div>
+                                            </div>
+                                            <div class="wt-col-auto-fill">
+                                                <a href="//jetbrains.com/objc/">AppCode</a>
+                                                <div class="wt-row wt-row_size_s">
+                                                    <div class="wt-col-inline">mysql</div>
+                                                    <div class="wt-col-inline">database</div>
+                                                </div>
+                                            </div>
+                                            <div class="wt-col-auto-fill">
+                                                <a href="//jetbrains.com/clion/">CLion</a>
+                                                <div class="wt-row wt-row_size_s">
+                                                    <div class="wt-col-inline">Ruby</div>
+                                                </div>
+                                            </div>
+                                            <div class="wt-col-auto-fill">
+                                                <a href="//jetbrains.com/pycharm/">PyCharm</a>
+                                                <div class="wt-row wt-row_size_s">
+                                                    <div class="wt-col-inline">mysql</div>
+                                                    <div class="wt-col-inline">database</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="wt-row wt-row_size_l wt-offset-top-24">
+                            <div class="wt-col-6">
+                                <h2>2 Extentions & 3 Profilers</h2>
+                                <div class="wt-row">
+                                    <!--5 icons-->
+                                </div>
+                            </div>
+                            <div class="wt-col-6">
+                                <div class="wt-row wt-row_size_m">
+                                    <div class="wt-col-inline">
+                                        <div class="wt-row wt-row_size_m wt-row_direction_column">
+                                            <div class="wt-col-auto-fill">
+                                                <a href="//jetbrains.com/resharper/">ReSharper</a>
+                                                <div class="wt-row wt-row_size_s">
+                                                    <div class="wt-col-inline">mysql</div>
+                                                    <div class="wt-col-inline">database</div>
+                                                </div>
+                                            </div>
+                                            <div class="wt-col-auto-fill">
+                                                <a href="//jetbrains.com/profiler/">dotTrace</a>
+                                                <div class="wt-row wt-row_size_s">
+                                                    <div class="wt-col-inline">Ruby</div>
+                                                </div>
+                                            </div>
+                                            <div class="wt-col-auto-fill">
+                                                <a href="//jetbrains.com/dotmemory/">dotMemory</a>
+                                                <div class="wt-row wt-row_size_s">
+                                                    <div class="wt-col-inline">C</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="wt-col-inline">
+                                        <div class="wt-row wt-row_size_m wt-row_direction_column">
+                                            <div class="wt-col-auto-fill">
+                                                <a href="//jetbrains.com/resharper-cpp/">ReSharper C++</a>
+                                                <div class="wt-row wt-row_size_s">
+                                                    <div class="wt-col-inline">C++</div>
+                                                </div>
+                                            </div>
+                                            <div class="wt-col-auto-fill">
+                                                <a href="//jetbrains.com/dotcover/">dotCover</a>
+                                                <div class="wt-row wt-row_size_s">
+                                                    <div class="wt-col-inline">mysql</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="wt-section">
+                    <div class="wt-container">
+                        <div class="wt-row wt-row_size_l wt-offset-top-12">
+                            <div class="wt-col-6">
+                                <img src="//jetbrains.com/all/img/img-4.png" alt="IMG 4">
+                            </div>
+                            <div class="wt-col-6">
+                                <div class="wt-row wt-row_direction_column">
+                                    <div class="wt-col-auto-fill">
+                                        <!--% icon-->[%]
+                                    </div>
+                                    <h5 class="wt-col-auto-fill">Great value</h5>
+                                    <p class="wt-col-auto-fill">Get 10 IDEs for the price of 2.</p>
+                                </div>
+                                <div class="wt-row wt-row_direction_column wt-offset-top-12">
+                                    <div class="wt-col-auto-fill">
+                                        <!--+ icon-->[+]
+                                    </div>
+                                    <h5 class="wt-col-auto-fill">Flexibility</h5>
+                                    <p class="wt-col-auto-fill">Use different tools for different projects on multiple
+                                        machines as and when you need them. Easile switch between the tools under the
+                                        All Products Pack license.</p>
+                                </div>
+                                <div class="wt-row wt-row_direction_column wt-offset-top-12">
+                                    <div class="wt-col-auto-fill">
+                                        <!--switch icon-->[S]
+                                    </div>
+                                    <h5 class="wt-col-auto-fill">Simple license management</h5>
+                                    <p class="wt-col-auto-fill">One unique license includes all the JetBrains desktop
+                                        tools. Get unlimited access to all of them.</p>
+                                </div>
+                                <div class="wt-row wt-row_direction_column wt-offset-top-12">
+                                    <div class="wt-col-auto-fill">
+                                        <!--academic cap icon-->[C]
+                                    </div>
+                                    <h5 class="wt-col-auto-fill">Further your skills</h5>
+                                    <p class="wt-col-auto-fill">Advance your programming skills with the best
+                                        professional tools.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="wt-section wt-section_bg_gray-dark">
+                    <div class="wt-container">
+                        <div class="wt-row wt-row_size_l wt-offset-top-24">
+                            <div class="wt-col-4">
+                                <img src="//jetbrains.com/all/img/toolbox.jpg" alt="toolbox">
+                            </div>
+                            <div class="wt-col-auto-fill">
+                                <h2>Maintain your tools with the Toolbox App</h2>
+                                <p>Simple installations, updates, and more</p>
+                                <a href="https://www.jetbrains.com/toolbox-app/">Learn more</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="wt-section">
+                    <div class="wt-container">
+                        <div class="wt-row wt-row_size_l wt-row-lg_direction_column wt-offset-top-24">
+                            <div class="wt-col-auto-fill">
+                                <div class="wt-row wt-row_size_l">
+                                    <h2 class="wt-col-3">Trusted by 320,083 buisnesses worldwide</h2>
+                                    <div class="wt-col-3"><!--Google logo-->[Google]</div>
+                                    <div class="wt-col-3"><!--HP logo-->[HP]</div>
+                                    <div class="wt-col-3"><!--Samsung logo-->[Samsung]</div>
+                                </div>
+                                <div class="wt-row wt-row_size_l">
+                                    <div class="wt-col-3 wt-offset-left-3"><!--Salesforce logo-->[Salesforce]</div>
+                                    <div class="wt-col-3"><!--Expedia logo-->[Expedia]</div>
+                                    <div class="wt-col-3"><!--Twitter logo-->[Twitter]</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="wt-row wt-row_size_l wt-offset-top-24">
+                            <h2 class="wt-col-12">FAQ</h2>
+                            <div class="wt-col-12 wt-offset-top-12">
+                                <div class="wt-row wt-row_size_l">
+                                    <div class="wt-col-6">
+                                        <div class="wt-row wt-row_size_m wt-row-lg_direction_column">
+                                            <h4 class="wt-col-12">
+                                                Can I upgrade my existing IntelliJ IDEA, PyCharm, WebStorm or
+                                                ReSharper Ultimate or any other JetBrains IDE license to the All
+                                                Products Pack?
+                                            </h4>
+                                            <p class="wt-col-12 wt-offset-top-12">
+                                                Yes, your existing licenses to any JetBrains desktop product make you
+                                                eligible to purchase new All Products Pack subscriptions with an
+                                                additional discount.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="wt-col-6">
+                                        <div class="wt-row wt-row_size_m wt-row-lg_direction_column">
+                                            <h4 class="wt-col-12">
+                                                How to upgrade to the All Products Pack?
+                                            </h4>
+                                            <p class="wt-col-12 wt-offset-top-12">
+                                                You can upgrade your current subscription to All Products Pack license
+                                                from your JetBrains account using the "Upgrade" link, which is
+                                                displayed next to all the licenses that can be upgraded. You can click
+                                                this link to go to JetBrains eStore and complete the order. If you have
+                                                any questions, please contact <a href="//jetbrains.com/support/sales/">Sales</a>.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="wt-row wt-row_size_l wt-offset-top-24">
+                            <div class="wt-col-6">
+                                <img src="//jetbrains.com/all/img/img-2.png" alt="IMG 2">
+                            </div>
+                            <div class="wt-col-6">
+                                <div class="wt-row wt-row_size_l wt-row-lg_direction_column">
+                                    <h2 class="wt-col-12">
+                                        Enhance your productivity and speed up coding with JetBrains tools!
+                                    </h2>
+                                    <div class="wt-col-12">
+                                        <div class="wt-row wt-row_size_m">
+                                            <div class="wt-col-12">
+                                                <!--Download icon-->[D]
+                                            </div>
+                                            <a href="//resources.jetbrains.com/storage/products/all-products-pack/APP_Infographics_individual_technologies.pdf" class="wt-col-12">
+                                                Download the All Product Pack infographics
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="social-footer wt-section wt-section_bg_gray-light">
+                <div class="wt-container">
+                    <div class="wt-row wt-row_size_l wt-row_align-items_center wt-offset-top-24">
+                        <div class="wt-col-5">
+                            <h2>Stay updated</h2>
+                            <form>
+                                <div>
+                                    <input placeholder="Email" autocomplete="on" name="Email" type="email" aria-invalid="true" value="">
+                                </div>
+                                <div>
+                                    <label>
+                                        <input type="checkbox" name="privacy" value="agree">By submitting this form, I agree to the <a href="https://www.jetbrains.com/legal/docs/privacy/privacy/">JetBrains Privacy Policy</a>
+                                    </label>
+                                </div>
+                                <button type="submit" class="n-button">Subscribe</button>
+                            </form>
+                        </div>
+                        <div class="wt-col-auto-fill">
+                            <h3>Follow us</h3>
+                            <div class="wt-row wt-row_size_m">
+                                <div class="wt-col-6">
+                                    <div class="social-footer-link-wrapper">
+                                        <img src="app/static/img/twitter.svg">
+                                        <a class="social-footer-link" href="//twitter.com/AllProductsPack">@AllProductsPack on Twitter</a>
+                                    </div>
+                                    <div class="social-footer-link-wrapper">
+                                        <img src="app/static/img/read.svg">
+                                        <a class="social-footer-link" href="//blog.jetbrains.com/toolbox-app/">JetBrains Blog</a>
+                                    </div>
+                                    <div class="social-footer-link-wrapper">
+                                        <img src="app/static/img/bug.svg"/>
+                                        <a class="social-footer-link" href="https://youtrack.jetbrains.com/issues">Bug and Issue Tracker</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="page-footer wt-section wt-section_bg_gray-dark">
+            <div class="wt-container">
+                <div class="wt-row wt-row_size_l wt-row_align-items_stretch wt-offset-top-12">
+                    <div class="wt-col-inline">
+                        <img src="app/static/img/jetbrains.svg" alt="JetBrains logo"/>
+                    </div>
+                    <div class="wt-col-inline">
+                        <h5>About JetBrains</h5>
+                        <ul type="none">
+                            <li>
+                                <a href="//jetbrains.com/company/">Company</a>
+                            </li>
+                            <li>
+                                <a href="//jetbrains.com/company/contacts/">Contacts</a>
+                            </li>
+                            <li>
+                                <a href="//jetbrains.com/company/news/">Press & Logos</a>
+                            </li>
+                            <li>
+                                <a href="//jetbrains.com/careers/jobs/">Careers</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="wt-col-auto-fill">
+                        <h5>Follow JetBrains</h5>
+                        <div class="wt-row wt-row_size_m">
+                            <ul type="none" class="wt-col-auto-fill">
+                                <li>
+                                    <a href="//facebook.com/JetBrains" title="JetBrains on Facebook" type="button">
+                                        <img src="app/static/img/facebook.svg"/>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="//twitter.com/jetbrains" title="JetBrains on Twitter" type="button">
+                                        <img src="app/static/img/twitter.svg"/>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="//linkedin.com/company/jetbrains" title="JetBrains on LinkedIn" type="button">
+                                        <img src="app/static/img/linkedin.svg"/>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="//youtube.com/user/JetBrainsTV" title="JetBrains on YouTube" type="button">
+                                        <img src="app/static/img/youtube.svg"/>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="//blog.jetbrains.com/" title="JetBrains blog" type="button">
+                                        <img src="app/static/img/read.svg"/>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="wt-row wt-row_size_l wt-row_align-items_end wt-offset-top-48">
+                    <div class="wt-col-inline">
+                        © 2000-2017 JetBrains s.r.o. All rights reserved.
+                    </div>
+                    <div class="wt-col-inline">
+                        Developed with drive and
+                        <a href="//jetbrains.com/idea/">IntelliJ IDEA</a>
+                    </div>
+                    <div class="wt-col-auto-fill">
+                        <a href="//jetbrains.com/privacy-security/">Privacy & Security</a>
+                        |
+                        <a href="//jetbrains.com/legal/docs/company/useterms/">Terms of Use</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
 </html>

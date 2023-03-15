@@ -9,6 +9,8 @@ body {
   --secondary-highlight-color: #6516b5;
   --dim-color: #696969;
   --gray-color: #afb1b3;
+  --orange-color: #fc801d;
+  --light-orange-color: #fd994a;
 }
 
 .example-for-breakpoints {
@@ -64,4 +66,103 @@ body {
   &_theme_dark {
     color: hsla(0, 0%, 100%, .6);
   }
+}
+
+.landing {
+  background-color: white;
+}
+
+.n-site-menu {
+  border-bottom: solid var(--gray-color) 1px;
+  background-color: white;
+  line-height: 72px;
+  position: sticky;
+  top: 0;
+}
+
+a:link, a:visited {
+  text-decoration: none;
+  color: black;
+  font-weight: 600;
+}
+
+a:hover, a:active {
+  text-decoration: none;
+  color: var(--orange-color);
+}
+
+.n-menu-title {
+  font-size: 20px;
+  color: var(--wt-color-grey-dark);
+}
+
+a.n-menu-button:link, a.n-menu-button:visited {
+  background-color: white;
+  color: var(--wt-color-grey-dark);
+  line-height: 24px;
+  padding: 8px 35px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  border: solid 1px var(--wt-color-grey);
+  border-radius: 24px;
+  font-weight: normal;
+}
+
+a.n-menu-button:hover, a.n-menu-button:active {
+  background-color: var(--orange-color);
+  color: white;
+  border-color: var(--orange-color);
+}
+
+.n-menu-element:link, .n-menu-element:visited {
+  color: var(--wt-color-grey-dark);
+  font-weight: normal;
+}
+
+.n-menu-element:hover, .n-menu-element:active {
+  color: var(--orange-color);
+}
+
+a.n-menu-active {
+  color: var(--orange-color);
+  font-weight: normal;
+}
+
+h1 {
+  font-size: 68px;
+}
+
+h2 {
+  font-size: 35px;
+}
+
+.n-subtitle {
+  font-size: 29px;
+}
+
+.n-button, .n-button:link, .n-button:visited {
+  background-color: var(--orange-color);
+  color: white;
+  padding: 14px 40px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  border-radius: 24px;
+  font-weight: normal;
+  border: none;
+}
+
+.n-button:hover, .n-button:active {
+  background-color: var(--light-orange-color);
+}
+
+.n-text-2 {
+  color: var(--wt-color-grey);
+  font-size: 16px;
+}
+
+.n-text-1 {
+  color: var(--wt-color-grey);
+  font-size: 19px;
 }

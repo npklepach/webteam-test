@@ -1,7 +1,9 @@
 import 'reset-css';
-import './exterrnal-libs/layout/index.css'
+import './exterrnal-libs/layout/index.css';
+import React from 'react';
+import '@jetbrains/logos/react';
 import fallbackStylesheetUrl from '!!file-loader!./exterrnal-libs/layout/layout-without-css-vars.css';
-import { supportsCssVars, createLink } from './exterrnal-libs/layout/utils';
+import {supportsCssVars, createLink} from './exterrnal-libs/layout/utils';
 import './index.entry.pcss';
 import './exterrnal-libs/breakpoints/index.css';
 
