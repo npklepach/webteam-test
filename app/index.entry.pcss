@@ -11,6 +11,8 @@ body {
   --gray-color: #afb1b3;
   --orange-color: #fc801d;
   --light-orange-color: #fd994a;
+  --grey-text: rgba(25,25,28,0.7);
+  --light-grey-text: hsla(0,0%,100%,.7);
 }
 
 .example-for-breakpoints {
@@ -124,7 +126,7 @@ a.n-menu-button:hover, a.n-menu-button:active {
   color: var(--orange-color);
 }
 
-a.n-menu-active {
+a.n-a-active {
   color: var(--orange-color);
   font-weight: normal;
 }
@@ -135,6 +137,12 @@ h1 {
 
 h2 {
   font-size: 35px;
+  line-height: 42px;
+}
+
+h3 {
+  font-size: 20px;
+  line-height: 28px;
 }
 
 .n-subtitle {
@@ -158,11 +166,97 @@ h2 {
 }
 
 .n-text-2 {
-  color: var(--wt-color-grey);
+  color: var(--grey-text);
   font-size: 16px;
+  line-height: 24px;
 }
 
 .n-text-1 {
-  color: var(--wt-color-grey);
+  color: var(--grey-text);
   font-size: 19px;
+  line-height: 28px;
+}
+
+.n-text-3 {
+  font-size: 13px;
+  color: var(--dim-color);
+}
+
+.n-logo-item {
+  margin-bottom: 48px;
+}
+
+.n-tag {
+  padding: 5px 20px;
+  border-radius: 4px;
+  background-color: var(--wt-color-dark-5);
+}
+
+.n-content-1 {
+  border-bottom: solid var(--gray-color) 1px;
+}
+
+.n-icon-2 {
+  height: 48px;
+  width: 48px;
+}
+
+.n-section {
+  padding-bottom: 0px;
+}
+
+.n-img-section {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.n-h2_dark {
+  color: white;
+}
+
+.n-text-1_dark {
+  color: var(--light-grey-text);
+  font-size: 19px;
+}
+
+.n-logos {
+  text-align: center;
+  align-items: center;
+}
+
+.n-logo-size {
+
+}
+
+.n-link {
+  color: var(--orange-color)!important;
+  font-weight: normal!important;
+}
+
+.n-download {
+  font-size: 14pt;
+}
+
+input[type=email] {
+  width: 100%;
+  padding: 11px 15px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  background-color: white;
+  border: 1px solid;
+  border-color: var(--gray-color);
+  font-size: 16px;
+  background-image: url("app/static/img/enter.svg");
+  background-position: 98%;
+  background-repeat: no-repeat;
+}
+
+.n-social-footer {
+  display: flex;
+  align-items: center;
+}
+
+.n-social-footer_icon {
+  margin-right: 16px;
 }
