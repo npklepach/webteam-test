@@ -13,6 +13,7 @@ body {
   --light-orange-color: #fd994a;
   --grey-text: rgba(25,25,28,0.7);
   --light-grey-text: hsla(0,0%,100%,.7);
+  --mid-grey-text: hsla(0,0%,100%,.5);
 }
 
 .example-for-breakpoints {
@@ -80,6 +81,7 @@ body {
   line-height: 72px;
   position: sticky;
   top: 0;
+  z-index: 100;
 }
 
 a:link, a:visited {
@@ -145,6 +147,11 @@ h3 {
   line-height: 28px;
 }
 
+h5 {
+  font-size: 16px;
+  line-height: 20px;
+}
+
 .n-subtitle {
   font-size: 29px;
 }
@@ -165,16 +172,16 @@ h3 {
   background-color: var(--light-orange-color);
 }
 
-.n-text-2 {
-  color: var(--grey-text);
-  font-size: 16px;
-  line-height: 24px;
-}
-
 .n-text-1 {
   color: var(--grey-text);
   font-size: 19px;
   line-height: 28px;
+}
+
+.n-text-2 {
+  color: var(--grey-text);
+  font-size: 16px;
+  line-height: 24px;
 }
 
 .n-text-3 {
@@ -182,8 +189,18 @@ h3 {
   color: var(--dim-color);
 }
 
+.n-text-1_dark {
+  color: var(--light-grey-text);
+  font-size: 19px;
+}
+
 .n-logo-item {
   margin-bottom: 48px;
+}
+
+.n-logo-item_shade {
+  opacity: 0.3;
+  transition: 0.3s;
 }
 
 .n-tag {
@@ -211,22 +228,44 @@ h3 {
   margin-right: auto;
 }
 
-.n-h2_dark {
+.n-h2_dark, .n-h5_dark {
   color: white;
 }
 
-.n-text-1_dark {
-  color: var(--light-grey-text);
-  font-size: 19px;
-}
-
 .n-logos {
+  display: flex;
   text-align: center;
   align-items: center;
 }
 
-.n-logo-size {
+.n-logo-google {
+  width: auto;
+  height: 48px;
+}
 
+.n-logo-hp {
+  width: auto;
+  height: 65px;
+}
+
+.n-logo-samsung {
+  width: auto;
+  height: 48px;
+}
+
+.n-logo-salesforce {
+  width: auto;
+  height: 70px;
+}
+
+.n-logo-expedia {
+  width: auto;
+  height: 51px;
+}
+
+.n-logo-twitter {
+  width: auto;
+  height: 45.6px;
 }
 
 .n-link {
@@ -247,7 +286,7 @@ input[type=email] {
   border: 1px solid;
   border-color: var(--gray-color);
   font-size: 16px;
-  background-image: url("app/static/img/enter.svg");
+  //background-image: url("app/static/img/enter.svg");
   background-position: 98%;
   background-repeat: no-repeat;
 }
@@ -259,4 +298,51 @@ input[type=email] {
 
 .n-social-footer_icon {
   margin-right: 16px;
+  width: 30px;
+  height: 30px;
+}
+
+.n-footer-list_element {
+  font-size: 16px!important;
+  color: var(--light-grey-text) !important;
+  font-weight: normal!important;
+  line-height: 24px!important;
+}
+
+a.n-footer-list_element:hover, a.n-footer-list_element:active {
+  color: white!important;
+  text-decoration: underline;
+}
+
+.n-footer_icon {
+  width: 30px;
+  height: 30px;
+}
+
+.n-footer {
+  margin-left: 3%;
+  margin-right: 3%;
+}
+
+.page-footer {
+  padding-bottom: 48px;
+}
+
+.n-footer-legal_element {
+  font-size: 16px;
+  color: var(--mid-grey-text);
+}
+
+.n-footer-legal_link {
+  font-size: 16px!important;
+  color: white!important;
+  font-weight: normal!important;
+}
+
+a.n-footer-legal_link:hover, a.n-footer-legal_link:active {
+  text-decoration: underline;
+}
+
+#intellij-idea_link:hover ~ #intellij-idea_logo {
+  background: #ccc
 }
