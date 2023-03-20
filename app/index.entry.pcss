@@ -1,5 +1,5 @@
 body {
-  font-family: system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Droid Sans","Helvetica Neue",Arial,sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Droid Sans", "Helvetica Neue", Arial, sans-serif;
   min-width: 320px;
   background-color: #27282c;
 }
@@ -11,9 +11,9 @@ body {
   --gray-color: #afb1b3;
   --orange-color: #fc801d;
   --light-orange-color: #fd994a;
-  --grey-text: rgba(25,25,28,0.7);
-  --light-grey-text: hsla(0,0%,100%,.7);
-  --mid-grey-text: hsla(0,0%,100%,.5);
+  --grey-text: rgba(25, 25, 28, 0.7);
+  --light-grey-text: hsla(0, 0%, 100%, .7);
+  --mid-grey-text: hsla(0, 0%, 100%, .5);
 }
 
 .example-for-breakpoints {
@@ -100,6 +100,9 @@ a:hover, a:active {
   color: var(--wt-color-grey-dark);
 }
 
+/* maybe id? */
+/* also can be combined with the following rules using PostCSS nesting */
+
 a.n-menu-button:link, a.n-menu-button:visited {
   background-color: white;
   color: var(--wt-color-grey-dark);
@@ -127,6 +130,8 @@ a.n-menu-button:hover, a.n-menu-button:active {
 .n-menu-element:hover, .n-menu-element:active {
   color: var(--orange-color);
 }
+
+/* Maybe "active link" and some more info about WTH it really is? */
 
 a.n-a-active {
   color: var(--orange-color);
@@ -189,48 +194,88 @@ h5 {
   color: var(--dim-color);
 }
 
+/* .wth-sth-background-grey .n-text-1 instead */
+
 .n-text-1_dark {
   color: var(--light-grey-text);
   font-size: 19px;
 }
 
+/* product logo? */
+
 .n-logo-item {
+  @media (--sm) {
+    margin-bottom: initial;
+    height: 48px;
+    width: 48px;
+  }
+
   margin-bottom: 48px;
 }
+
+/* product logo shade? */
 
 .n-logo-item_shade {
   opacity: 0.3;
   transition: 0.3s;
 }
 
+/* product info tag? */
+
 .n-tag {
+  @media (--sm) {
+    padding: 5px 10px;
+    border-radius: 4px;
+    background-color: var(--wt-color-dark-5);
+  }
+
   padding: 5px 20px;
   border-radius: 4px;
   background-color: var(--wt-color-dark-5);
 }
 
+/* what is this and how can you describe it better? */
+
 .n-content-1 {
   border-bottom: solid var(--gray-color) 1px;
 }
+
+/* What icon and why is it "icon-2"? */
 
 .n-icon-2 {
   height: 48px;
   width: 48px;
 }
 
-.n-section {
-  padding-bottom: 0px;
+.wt-section {
+  @media (--sm) {
+    padding-bottom: 64px;
+  }
+
+  padding-bottom: 96px;
 }
+
+.n-section {
+  @media (--sm) {
+    padding-bottom: 64px;
+  }
+
+  padding-bottom: 0;
+}
+
+/* Toolbox screenshot? */
 
 .n-img-section {
   display: block;
-  margin-left: auto;
-  margin-right: auto;
 }
+
+/* nested selectors too */
 
 .n-h2_dark, .n-h5_dark {
   color: white;
 }
+
+/* Partner logos */
 
 .n-logos {
   display: flex;
@@ -238,46 +283,57 @@ h5 {
   align-items: center;
 }
 
+/* Partner logo google */
+
 .n-logo-google {
-  width: auto;
+  width: 144px;
   height: 48px;
 }
 
 .n-logo-hp {
-  width: auto;
-  height: 65px;
-}
-
-.n-logo-samsung {
-  width: auto;
-  height: 48px;
-}
-
-.n-logo-salesforce {
-  width: auto;
+  width: 70px;
   height: 70px;
 }
 
+.n-logo-samsung {
+  width: 160px;
+  height: 53px;
+}
+
+.n-logo-salesforce {
+  width: 110px;
+  height: 77px;
+}
+
 .n-logo-expedia {
-  width: auto;
-  height: 51px;
+  @media (--sm) {
+    width: 156px;
+    height: 44px;
+  }
+
+  width: 177px;
+  height: 50px;
 }
 
 .n-logo-twitter {
-  width: auto;
-  height: 45.6px;
+  width: 57px;
+  height: 46px;
 }
 
+/* FAQ link */
+
 .n-link {
-  color: var(--orange-color)!important;
-  font-weight: normal!important;
+  color: var(--orange-color) !important;
+  font-weight: normal !important;
 }
+
+/* download inforgraphics */
 
 .n-download {
   font-size: 14pt;
 }
 
-input[type=email] {
+#subscribe-email {
   width: 100%;
   padding: 11px 15px;
   margin: 8px 0;
@@ -286,7 +342,7 @@ input[type=email] {
   border: 1px solid;
   border-color: var(--gray-color);
   font-size: 16px;
-  //background-image: url("app/static/img/enter.svg");
+/* background-image: url("app/static/img/enter.svg"); background-position: 98%; background-repeat: no-repeat; */
   background-position: 98%;
   background-repeat: no-repeat;
 }
@@ -296,27 +352,47 @@ input[type=email] {
   align-items: center;
 }
 
-.n-social-footer_icon {
+.n-social-footer_twitter {
   margin-right: 16px;
-  width: 30px;
-  height: 30px;
+}
+
+.n-social-footer_read {
+  margin-right: 18px;
+}
+
+.n-social-footer_bug {
+  margin-right: 19px;
 }
 
 .n-footer-list_element {
-  font-size: 16px!important;
+  font-size: 16px !important;
   color: var(--light-grey-text) !important;
-  font-weight: normal!important;
-  line-height: 24px!important;
+  font-weight: normal !important;
+  line-height: 24px !important;
 }
 
 a.n-footer-list_element:hover, a.n-footer-list_element:active {
-  color: white!important;
+  color: white !important;
   text-decoration: underline;
 }
 
+/* replace with a class on a list or sth else */
+
+.n-footer_link {
+  vertical-align: middle;
+}
+
 .n-footer_icon {
-  width: 30px;
-  height: 30px;
+  vertical-align: middle;
+  margin-right: 24px !important;
+}
+
+.n-footer_icon_read {
+  filter: invert(75.5%);
+}
+
+.n-jb-logo {
+  margin-top: 37px;
 }
 
 .n-footer {
@@ -334,15 +410,31 @@ a.n-footer-list_element:hover, a.n-footer-list_element:active {
 }
 
 .n-footer-legal_link {
-  font-size: 16px!important;
-  color: white!important;
-  font-weight: normal!important;
+  font-size: 16px !important;
+  color: white !important;
+  font-weight: normal !important;
 }
 
 a.n-footer-legal_link:hover, a.n-footer-legal_link:active {
   text-decoration: underline;
 }
 
-#intellij-idea_link:hover ~ #intellij-idea_logo {
-  background: #ccc
+.n-img-size {
+  max-width: 100%;
+}
+
+.breakpoints-block-lg {
+  @media (--sm) {
+    display: none;
+  }
+
+  display: flex;
+}
+
+.breakpoints-block-sm {
+  @media (--sm) {
+    display: flex;
+  }
+
+  display: none;
 }

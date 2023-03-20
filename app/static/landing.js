@@ -17,4 +17,5 @@ function mouseLeave(event) {
   let elements = document.getElementsByClassName("n-logo-item");
   for (let element of elements) {
     element.classList.remove("n-logo-item_shade");
-  }}
+  }
+}
