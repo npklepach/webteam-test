@@ -9,11 +9,12 @@ body {
   --secondary-highlight-color: #6516b5;
   --dim-color: #696969;
   --gray-color: #afb1b3;
-  --orange-color: #fc801d;
+  --orange-color: #f76707;
   --light-orange-color: #fd994a;
-  --grey-text: rgba(25, 25, 28, 0.7);
   --light-grey-text: hsla(0, 0%, 100%, .7);
   --mid-grey-text: hsla(0, 0%, 100%, .5);
+  --grey-active-list-item: #f1f1f1;
+  --text-grey: rgba(39, 40, 44, .7);
 }
 
 .example-for-breakpoints {
@@ -64,48 +65,63 @@ body {
   font-size: 18px;
   font-weight: 400;
   line-height: 28px;
-  color: rgba(39, 40, 44, .7);
+  color: var(--text-grey);
 
   &_theme_dark {
     color: hsla(0, 0%, 100%, .6);
   }
 }
 
+.text-2 {
+  letter-spacing: normal;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 24px;
+  color: var(--text-grey);
+}
+
+.text-3 {
+  letter-spacing: normal;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16px;
+  color: var(--text-grey);
+}
+
 .landing {
   background-color: white;
 }
 
-.n-site-menu {
+.site-menu {
   border-bottom: solid var(--gray-color) 1px;
   background-color: white;
   line-height: 72px;
   position: sticky;
   top: 0;
-  z-index: 100;
+  z-index: 1000;
 }
 
-a:link, a:visited {
+
+a {
   text-decoration: none;
-  color: black;
   font-weight: 600;
+
+  &:link, &:visited {
+    color: black;
+  }
+
+  &:hover, &:active {
+    color: var(--orange-color);
+  }
 }
 
-a:hover, a:active {
-  text-decoration: none;
-  color: var(--orange-color);
-}
-
-.n-menu-title {
+#desktop-menu-title {
   font-size: 20px;
-  color: var(--wt-color-grey-dark);
+  line-height: 28px;
+  color: #27282c;
 }
 
-/* maybe id? */
-/* also can be combined with the following rules using PostCSS nesting */
-
-a.n-menu-button:link, a.n-menu-button:visited {
-  background-color: white;
-  color: var(--wt-color-grey-dark);
+#desktop-menu-button {
   line-height: 24px;
   padding: 8px 35px;
   text-align: center;
@@ -113,22 +129,28 @@ a.n-menu-button:link, a.n-menu-button:visited {
   display: inline-block;
   border: solid 1px var(--wt-color-grey);
   border-radius: 24px;
-  font-weight: normal;
+
+  &:link, &:visited {
+    background-color: white;
+    color: var(--wt-color-grey-dark);
+    font-weight: normal;
+  }
+
+  &:hover, &:active {
+    background-color: var(--orange-color);
+    color: white;
+    border-color: var(--orange-color);
+  }
 }
 
-a.n-menu-button:hover, a.n-menu-button:active {
-  background-color: var(--orange-color);
-  color: white;
-  border-color: var(--orange-color);
-}
+.desktop-menu-item {
+  &:link, &:visited {
+    color: var(--text-grey);
+  }
 
-.n-menu-element:link, .n-menu-element:visited {
-  color: var(--wt-color-grey-dark);
-  font-weight: normal;
-}
-
-.n-menu-element:hover, .n-menu-element:active {
-  color: var(--orange-color);
+  &:hover, &:active, &#desktop-menu-item-active {
+    color: var(--orange-color);
+  }
 }
 
 /* Maybe "active link" and some more info about WTH it really is? */
@@ -175,30 +197,6 @@ h5 {
 
 .n-button:hover, .n-button:active {
   background-color: var(--light-orange-color);
-}
-
-.n-text-1 {
-  color: var(--grey-text);
-  font-size: 19px;
-  line-height: 28px;
-}
-
-.n-text-2 {
-  color: var(--grey-text);
-  font-size: 16px;
-  line-height: 24px;
-}
-
-.n-text-3 {
-  font-size: 13px;
-  color: var(--dim-color);
-}
-
-/* .wth-sth-background-grey .n-text-1 instead */
-
-.n-text-1_dark {
-  color: var(--light-grey-text);
-  font-size: 19px;
 }
 
 /* product logo? */
@@ -445,4 +443,78 @@ a.n-footer-legal_link:hover, a.n-footer-legal_link:active {
   }
 
   display: initial;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: white;
+  width: 100vw;
+  overflow: auto;
+  z-index: 1;
+  top: calc(100% + 1px);
+}
+
+.dropdown-content a {
+  color: black;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-menu {
+  position: relative;
+}
+
+.dropdown-button {
+  padding: 12px 16px;
+  width: 100vw;
+  font-size: 15px;
+  border: none;
+  cursor: pointer;
+  background-color: white;
+  text-align: left;
+}
+
+#dropdown-button-text {
+  vertical-align: super;
+}
+
+.dropdown a:hover {
+  background-color: white;
+}
+
+.dropdown-list-active {
+  display: flex;
+  transition: 0.2s;
+}
+
+.dropdown-overlay-active {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--wt-color-dark-40);
+  z-index: 900;
+  transition: 0.2s;
+}
+
+.dropdown-list-item {
+  line-height: 24px;
+  padding: 12px 16px;
+  margin-left: 0;
+  margin-right: 0;
+  width: 100vw;
+  font-size: 15px!important;
+  font-weight: normal!important;
+}
+
+.dropdown-list-item:hover {
+  background-color: var(--grey-active-list-item);
+}
+
+.dropdown-icon-hide {
+  display: none;
 }

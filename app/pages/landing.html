@@ -12,26 +12,38 @@
         <link rel="stylesheet" href="app/exterrnal-libs/breakpoints/index.css">
     </head>
     <body class="landing">
-        <div class="n-site-menu">
+        <div id="dropdown-overlay" onclick="toggleMobileMenu()"></div>
+        <div class="site-menu">
             <div class="wt-container">
                 <div class="wt-row wt-row_size_m wt-row_align-items_center breakpoints-block-lg">
                     <div class="wt-col-auto-fill">
                         <a href="//jetbrains.com/all/">
-                            <span class="n-menu-title">Toolbox</span>
+                            <span id="desktop-menu-title">Toolbox</span>
                         </a>
                     </div>
                     <div class="wt-col-inline">
-                        <a href="//jetbrains.com/all/" class="n-a-active">Overview</a>
+                        <a href="//jetbrains.com/all/" class="text-2 desktop-menu-item" id="desktop-menu-item-active">Overview</a>
                     </div>
                     <div class="wt-col-inline">
-                        <a href="//jetbrains.com/toolbox-app/" class="n-menu-element">Toolbox App</a>
+                        <a href="//jetbrains.com/toolbox-app/" class="text-2 desktop-menu-item">Toolbox App</a>
                     </div>
                     <div class="wt-col-inline">
-                        <a href="//jetbrains.com/store/" type="button" class="n-menu-button">Buy Now</a>
+                        <a href="//jetbrains.com/store/" type="button" id="desktop-menu-button">Buy Now</a>
                     </div>
                 </div>
-                <div class="wt-row wt-row-sm_size_0 breakpoints-block-sm">
-
+                <div class="wt-row wt-row-sm_size_m breakpoints-block-sm dropdown-menu">
+                    <button onclick="toggleMobileMenu()" class="dropdown-button">
+                        <span>
+                            <span id="dropdown-button-text">Overview</span>
+                            <img id="dropdown-icon-down" src="app/static/img/down.svg">
+                            <img id="dropdown-icon-up" class="dropdown-icon-hide" src="app/static/img/up.svg">
+                        </span>
+                    </button>
+                </div>
+                <div id="dropdown-list" class="wt-row wt-row-sm_size_m dropdown-content">
+                    <a class="dropdown-list-item" href="#">Overview</a>
+                    <a class="dropdown-list-item" href="#">Toolbox App</a>
+                    <a class="dropdown-list-item" href="#">Buy Now</a>
                 </div>
             </div>
         </div>
@@ -53,11 +65,11 @@
                                 <a class="wt-offset-top-48 wt-offset-top-sm-12 n-button" href="//jetbrains.com/toolbox-app/download/download-thanks.html" type="button">
                                     I Want It All
                                 </a>
-                                <p class="wt-offset-top-24 n-text-2">An upgrade and switch option available</p>
+                                <p class="wt-offset-top-24 text-2">An upgrade and switch option available</p>
                             </div>
                         </div>
                         <div class="wt-row wt-row_size_m wt-offset-top-96 wt-offset-top-sm-48">
-                            <div class="wt-col-6 wt-offset-left-6 wt-col-sm-12 wt-offset-left-sm-0 wt-offset-top-sm-12 n-text-1">
+                            <div class="wt-col-6 wt-offset-left-6 wt-col-sm-12 wt-offset-left-sm-0 wt-offset-top-sm-12 text-1">
                                 Get access to all JetBrains desktop tools including 10 IDEs, 2 extensions and 3 profiles
                             </div>
                         </div>
@@ -108,8 +120,8 @@
                                             </a>
                                         </h3>
                                         <div class="wt-row wt-row_size_s wt-offset-top-12">
-                                            <div class="wt-col-inline n-tag n-text-3">Kotlin</div>
-                                            <div class="wt-col-inline n-tag n-text-3">Java</div>
+                                            <div class="wt-col-inline n-tag text-3">Kotlin</div>
+                                            <div class="wt-col-inline n-tag text-3">Java</div>
                                         </div>
                                     </div>
                                     <div class="wt-col-6">
@@ -119,7 +131,7 @@
                                             </a>
                                         </h3>
                                         <div class="wt-row wt-row_size_s wt-offset-top-12">
-                                            <div class="wt-col-inline n-tag n-text-3">mysql</div>
+                                            <div class="wt-col-inline n-tag text-3">mysql</div>
                                         </div>
                                     </div>
                                     <div class="wt-col-6 wt-offset-top-24">
@@ -129,8 +141,8 @@
                                             </a>
                                         </h3>
                                         <div class="wt-row wt-row_size_s wt-offset-top-12">
-                                            <div class="wt-col-inline n-tag n-text-3">C#</div>
-                                            <div class="wt-col-inline n-tag n-text-3">.NET</div>
+                                            <div class="wt-col-inline n-tag text-3">C#</div>
+                                            <div class="wt-col-inline n-tag text-3">.NET</div>
                                         </div>
                                     </div>
                                     <div class="wt-col-6 wt-offset-top-24">
@@ -140,7 +152,7 @@
                                             </a>
                                         </h3>
                                         <div class="wt-row wt-row_size_s wt-offset-top-12">
-                                            <div class="wt-col-inline n-tag n-text-3">Ruby</div>
+                                            <div class="wt-col-inline n-tag text-3">Ruby</div>
                                         </div>
                                     </div>
                                     <div class="wt-col-6 wt-offset-top-24">
@@ -150,7 +162,7 @@
                                             </a>
                                         </h3>
                                         <div class="wt-row wt-row_size_s wt-offset-top-12">
-                                            <div class="wt-col-inline n-tag n-text-3">C++</div>
+                                            <div class="wt-col-inline n-tag text-3">C++</div>
                                         </div>
                                     </div>
                                     <div class="wt-col-6 wt-offset-top-24">
@@ -160,8 +172,8 @@
                                             </a>
                                         </h3>
                                         <div class="wt-row wt-row_size_s wt-offset-top-12">
-                                            <div class="wt-col-inline n-tag n-text-3">mysql</div>
-                                            <div class="wt-col-inline n-tag n-text-3">database</div>
+                                            <div class="wt-col-inline n-tag text-3">mysql</div>
+                                            <div class="wt-col-inline n-tag text-3">database</div>
                                         </div>
                                     </div>
                                     <div class="wt-col-6 wt-offset-top-24">
@@ -171,7 +183,7 @@
                                             </a>
                                         </h3>
                                         <div class="wt-row wt-row_size_s wt-offset-top-12">
-                                            <div class="wt-col-inline n-tag n-text-3">C</div>
+                                            <div class="wt-col-inline n-tag text-3">C</div>
                                         </div>
                                     </div>
                                     <div class="wt-col-6 wt-offset-top-24">
@@ -181,7 +193,7 @@
                                             </a>
                                         </h3>
                                         <div class="wt-row wt-row_size_s wt-offset-top-12">
-                                            <div class="wt-col-inline n-tag n-text-3">Ruby</div>
+                                            <div class="wt-col-inline n-tag text-3">Ruby</div>
                                         </div>
                                     </div>
                                     <div class="wt-col-6 wt-offset-top-24">
@@ -191,8 +203,8 @@
                                             </a>
                                         </h3>
                                         <div class="wt-row wt-row_size_s wt-offset-top-12">
-                                            <div class="wt-col-inline n-tag n-text-3">mysql</div>
-                                            <div class="wt-col-inline n-tag n-text-3">database</div>
+                                            <div class="wt-col-inline n-tag text-3">mysql</div>
+                                            <div class="wt-col-inline n-tag text-3">database</div>
                                         </div>
                                     </div>
                                     <div class="wt-col-6 wt-offset-top-24">
@@ -202,8 +214,8 @@
                                             </a>
                                         </h3>
                                         <div class="wt-row wt-row_size_s wt-offset-top-12">
-                                            <div class="wt-col-inline n-tag n-text-3">mysql</div>
-                                            <div class="wt-col-inline n-tag n-text-3">database</div>
+                                            <div class="wt-col-inline n-tag text-3">mysql</div>
+                                            <div class="wt-col-inline n-tag text-3">database</div>
                                         </div>
                                     </div>
                                 </div>
@@ -222,8 +234,8 @@
                                     </h3>
                                     <div class="wt-col-sm-12 wt-offset-top-sm-12">
                                         <div class="wt-row wt-row-sm_size_xs">
-                                            <div class="wt-col-inline n-tag n-text-3">Kotlin</div>
-                                            <div class="wt-col-inline n-tag n-text-3">Java</div>
+                                            <div class="wt-col-inline n-tag text-3">Kotlin</div>
+                                            <div class="wt-col-inline n-tag text-3">Java</div>
                                         </div>
                                     </div>
                                 </div>
@@ -240,7 +252,7 @@
                                     </h3>
                                     <div class="wt-col-sm-12 wt-offset-top-sm-12">
                                         <div class="wt-row wt-row-sm_size_xs">
-                                            <div class="wt-col-inline n-tag n-text-3">HTML</div>
+                                            <div class="wt-col-inline n-tag text-3">HTML</div>
                                         </div>
                                     </div>
                                 </div>
@@ -257,7 +269,7 @@
                                     </h3>
                                     <div class="wt-col-sm-12 wt-offset-top-sm-12">
                                         <div class="wt-row wt-row-sm_size_xs">
-                                            <div class="wt-col-inline n-tag n-text-3">C++</div>
+                                            <div class="wt-col-inline n-tag text-3">C++</div>
                                         </div>
                                     </div>
                                 </div>
@@ -274,7 +286,7 @@
                                     </h3>
                                     <div class="wt-col-sm-12 wt-offset-top-sm-12">
                                         <div class="wt-row wt-row-sm_size_xs">
-                                            <div class="wt-col-inline n-tag n-text-3">C</div>
+                                            <div class="wt-col-inline n-tag text-3">C</div>
                                         </div>
                                     </div>
                                 </div>
@@ -291,8 +303,8 @@
                                     </h3>
                                     <div class="wt-col-sm-12 wt-offset-top-sm-12">
                                         <div class="wt-row wt-row-sm_size_xs">
-                                            <div class="wt-col-inline n-tag n-text-3">mysql</div>
-                                            <div class="wt-col-inline n-tag n-text-3">database</div>
+                                            <div class="wt-col-inline n-tag text-3">mysql</div>
+                                            <div class="wt-col-inline n-tag text-3">database</div>
                                         </div>
                                     </div>
                                 </div>
@@ -309,7 +321,7 @@
                                     </h3>
                                     <div class="wt-col-sm-12 wt-offset-top-sm-12">
                                         <div class="wt-row wt-row-sm_size_xs">
-                                            <div class="wt-col-inline n-tag n-text-3">C</div>
+                                            <div class="wt-col-inline n-tag text-3">C</div>
                                         </div>
                                     </div>
                                 </div>
@@ -326,8 +338,8 @@
                                     </h3>
                                     <div class="wt-col-sm-12 wt-offset-top-sm-12">
                                         <div class="wt-row wt-row-sm_size_xs">
-                                            <div class="wt-col-inline n-tag n-text-3">C#</div>
-                                            <div class="wt-col-inline n-tag n-text-3">.NET</div>
+                                            <div class="wt-col-inline n-tag text-3">C#</div>
+                                            <div class="wt-col-inline n-tag text-3">.NET</div>
                                         </div>
                                     </div>
                                 </div>
@@ -344,7 +356,7 @@
                                     </h3>
                                     <div class="wt-col-sm-12 wt-offset-top-sm-12">
                                         <div class="wt-row wt-row-sm_size_xs">
-                                            <div class="wt-col-inline n-tag n-text-3">Ruby</div>
+                                            <div class="wt-col-inline n-tag text-3">Ruby</div>
                                         </div>
                                     </div>
                                 </div>
@@ -361,8 +373,8 @@
                                     </h3>
                                     <div class="wt-col-sm-12 wt-offset-top-sm-12">
                                         <div class="wt-row wt-row-sm_size_xs">
-                                            <div class="wt-col-inline n-tag n-text-3">php</div>
-                                            <div class="wt-col-inline n-tag n-text-3">HTML</div>
+                                            <div class="wt-col-inline n-tag text-3">php</div>
+                                            <div class="wt-col-inline n-tag text-3">HTML</div>
                                         </div>
                                     </div>
                                 </div>
@@ -379,7 +391,7 @@
                                     </h3>
                                     <div class="wt-col-sm-12 wt-offset-top-sm-12">
                                         <div class="wt-row wt-row-sm_size_xs">
-                                            <div class="wt-col-inline n-tag n-text-3">Python</div>
+                                            <div class="wt-col-inline n-tag text-3">Python</div>
                                         </div>
                                     </div>
                                 </div>
@@ -417,8 +429,8 @@
                                             </a>
                                         </h3>
                                         <div class="wt-row wt-row_size_s wt-offset-top-12">
-                                            <div class="wt-col-inline n-tag n-text-3">mysql</div>
-                                            <div class="wt-col-inline n-tag n-text-3">database</div>
+                                            <div class="wt-col-inline n-tag text-3">mysql</div>
+                                            <div class="wt-col-inline n-tag text-3">database</div>
                                         </div>
                                     </div>
                                     <div class="wt-col-6">
@@ -428,7 +440,7 @@
                                             </a>
                                         </h3>
                                         <div class="wt-row wt-row_size_s wt-offset-top-12">
-                                            <div class="wt-col-inline n-tag n-text-3">C++</div>
+                                            <div class="wt-col-inline n-tag text-3">C++</div>
                                         </div>
                                     </div>
                                     <div class="wt-col-6 wt-offset-top-24">
@@ -438,7 +450,7 @@
                                             </a>
                                         </h3>
                                         <div class="wt-row wt-row_size_s wt-offset-top-12">
-                                            <div class="wt-col-inline n-tag n-text-3">Ruby</div>
+                                            <div class="wt-col-inline n-tag text-3">Ruby</div>
                                         </div>
                                     </div>
                                     <div class="wt-col-6 wt-offset-top-24">
@@ -448,7 +460,7 @@
                                             </a>
                                         </h3>
                                         <div class="wt-row wt-row_size_s wt-offset-top-12">
-                                            <div class="wt-col-inline n-tag n-text-3">mysql</div>
+                                            <div class="wt-col-inline n-tag text-3">mysql</div>
                                         </div>
                                     </div>
                                     <div class="wt-col-6 wt-offset-top-24">
@@ -458,7 +470,7 @@
                                             </a>
                                         </h3>
                                         <div class="wt-row wt-row_size_s wt-offset-top-12">
-                                            <div class="wt-col-inline n-tag n-text-3">C</div>
+                                            <div class="wt-col-inline n-tag text-3">C</div>
                                         </div>
                                     </div>
                                 </div>
@@ -477,8 +489,8 @@
                                     </h3>
                                     <div class="wt-col-sm-12 wt-offset-top-sm-12">
                                         <div class="wt-row wt-row-sm_size_xs">
-                                            <div class="wt-col-inline n-tag n-text-3">mysql</div>
-                                            <div class="wt-col-inline n-tag n-text-3">database</div>
+                                            <div class="wt-col-inline n-tag text-3">mysql</div>
+                                            <div class="wt-col-inline n-tag text-3">database</div>
                                         </div>
                                     </div>
                                 </div>
@@ -495,7 +507,7 @@
                                     </h3>
                                     <div class="wt-col-sm-12 wt-offset-top-sm-12">
                                         <div class="wt-row wt-row-sm_size_xs">
-                                            <div class="wt-col-inline n-tag n-text-3">C++</div>
+                                            <div class="wt-col-inline n-tag text-3">C++</div>
                                         </div>
                                     </div>
                                 </div>
@@ -512,7 +524,7 @@
                                     </h3>
                                     <div class="wt-col-sm-12 wt-offset-top-sm-12">
                                         <div class="wt-row wt-row-sm_size_xs">
-                                            <div class="wt-col-inline n-tag n-text-3">.NET</div>
+                                            <div class="wt-col-inline n-tag text-3">.NET</div>
                                         </div>
                                     </div>
                                 </div>
@@ -529,8 +541,8 @@
                                     </h3>
                                     <div class="wt-col-sm-12 wt-offset-top-sm-12">
                                         <div class="wt-row wt-row-sm_size_xs">
-                                            <div class="wt-col-inline n-tag n-text-3">mysql</div>
-                                            <div class="wt-col-inline n-tag n-text-3">database</div>
+                                            <div class="wt-col-inline n-tag text-3">mysql</div>
+                                            <div class="wt-col-inline n-tag text-3">database</div>
                                         </div>
                                     </div>
                                 </div>
@@ -547,7 +559,7 @@
                                     </h3>
                                     <div class="wt-col-sm-12 wt-offset-top-sm-12">
                                         <div class="wt-row wt-row-sm_size_xs">
-                                            <div class="wt-col-inline n-tag n-text-3">C</div>
+                                            <div class="wt-col-inline n-tag text-3">C</div>
                                         </div>
                                     </div>
                                 </div>
@@ -567,14 +579,14 @@
                                         <img src="app/static/img/price.svg" class="n-icon-2">
                                     </div>
                                     <h3 class="wt-col-auto-fill wt-offset-top-12">Great value</h3>
-                                    <p class="wt-col-auto-fill wt-offset-top-12 n-text-1">Get 10 IDEs for the price of 2.</p>
+                                    <p class="wt-col-auto-fill wt-offset-top-12 text-1">Get 10 IDEs for the price of 2.</p>
                                 </div>
                                 <div class="wt-row wt-row_direction_column wt-offset-top-12">
                                     <div class="wt-col-auto-fill wt-offset-top-24">
                                         <img src="app/static/img/flexibility.svg" class="n-icon-2">
                                     </div>
                                     <h3 class="wt-col-auto-fill wt-offset-top-12">Flexibility</h3>
-                                    <p class="wt-col-auto-fill wt-offset-top-12 n-text-1">Use different tools for different projects on multiple
+                                    <p class="wt-col-auto-fill wt-offset-top-12 text-1">Use different tools for different projects on multiple
                                         machines as and when you need them. Easile switch between the tools under the
                                         All Products Pack license.</p>
                                 </div>
@@ -583,7 +595,7 @@
                                         <img src="app/static/img/management.svg" class="n-icon-2">
                                     </div>
                                     <h3 class="wt-col-auto-fill wt-offset-top-12">Simple license management</h3>
-                                    <p class="wt-col-auto-fill wt-offset-top-12 n-text-1">One unique license includes all the JetBrains desktop
+                                    <p class="wt-col-auto-fill wt-offset-top-12 text-1">One unique license includes all the JetBrains desktop
                                         tools. Get unlimited access to all of them.</p>
                                 </div>
                                 <div class="wt-row wt-row_direction_column wt-offset-top-12">
@@ -591,7 +603,7 @@
                                         <img src="app/static/img/skills.svg" class="n-icon-2">
                                     </div>
                                     <h3 class="wt-col-auto-fill wt-offset-top-12">Further your skills</h3>
-                                    <p class="wt-col-auto-fill wt-offset-top-12 n-text-1">Advance your programming skills with the best
+                                    <p class="wt-col-auto-fill wt-offset-top-12 text-1">Advance your programming skills with the best
                                         professional tools.</p>
                                 </div>
                             </div>
@@ -609,10 +621,10 @@
                                     <h2 class="wt-col-12 wt-offset-top-96 wt-offset-top-sm-12 n-h2_dark">
                                         Maintain your tools with the Toolbox App
                                     </h2>
-                                    <p class="wt-col-12 wt-offset-top-24 n-text-1_dark">
+                                    <p class="wt-col-12 wt-offset-top-24 text-1 text-1_theme_dark">
                                         Simple installations, updates, and more
                                     </p>
-                                    <a class="wt-col-12 wt-offset-top-24 n-a-active n-text-1" href="//jetbrains.com/toolbox-app/">
+                                    <a class="wt-col-12 wt-offset-top-24 n-a-active text-1" href="//jetbrains.com/toolbox-app/">
                                         Learn more
                                     </a>
                                 </div>
@@ -686,7 +698,7 @@
                                                 ReSharper Ultimate or any other JetBrains IDE license to the All
                                                 Products Pack?
                                             </h3>
-                                            <p class="wt-col-12 wt-offset-top-24 wt-offset-top-sm-12 n-text-1">
+                                            <p class="wt-col-12 wt-offset-top-24 wt-offset-top-sm-12 text-1">
                                                 Yes, your existing licenses to any JetBrains desktop product make you
                                                 eligible to purchase new All Products Pack subscriptions with an
                                                 additional discount.
@@ -698,7 +710,7 @@
                                             <h3 class="wt-col-12">
                                                 How to upgrade to the All Products Pack?
                                             </h3>
-                                            <p class="wt-col-12 wt-offset-top-24 wt-offset-top-sm-12 n-text-1">
+                                            <p class="wt-col-12 wt-offset-top-24 wt-offset-top-sm-12 text-1">
                                                 You can upgrade your current subscription to All Products Pack license
                                                 from your JetBrains account using the "Upgrade" link, which is
                                                 displayed next to all the licenses that can be upgraded. You can click
@@ -761,7 +773,7 @@
                                     <label>
                                         <div class="wt-row wt-row_size_s wt-offset-top-12">
                                             <input class="wt-col-inline" type="checkbox" name="privacy" value="agree">
-                                            <p class="wt-col-auto-fill n-text-3">
+                                            <p class="wt-col-auto-fill text-3">
                                                 By submitting this form, I agree to the
                                                 <br>
                                                 <a href="//jetbrains.com/legal/docs/privacy/privacy/">
@@ -780,15 +792,15 @@
                                 <div class="wt-col-6 wt-col-lg-12">
                                     <div class="wt-offset-top-24 n-social-footer">
                                         <img class="n-social-footer_twitter" src="app/static/img/twitter_orange.svg">
-                                        <a class="n-text-2 n-a-active" href="//twitter.com/AllProductsPack">@AllProductsPack on Twitter</a>
+                                        <a class="text-2 n-a-active" href="//twitter.com/AllProductsPack">@AllProductsPack on Twitter</a>
                                     </div>
                                     <div class="wt-offset-top-24 wt-offset-top-sm-12 n-social-footer">
                                         <img class="n-social-footer_read" src="app/static/img/read_orange.svg">
-                                        <a class="n-text-2 n-a-active" href="//blog.jetbrains.com/toolbox-app/">JetBrains Blog</a>
+                                        <a class="text-2 n-a-active" href="//blog.jetbrains.com/toolbox-app/">JetBrains Blog</a>
                                     </div>
                                     <div class="wt-offset-top-24 wt-offset-top-sm-12 n-social-footer">
                                         <img class="n-social-footer_bug" src="app/static/img/bug_orange.svg"/>
-                                        <a class="n-text-2 n-a-active" href="https://youtrack.jetbrains.com/issues">Bug and Issue Tracker</a>
+                                        <a class="text-2 n-a-active" href="https://youtrack.jetbrains.com/issues">Bug and Issue Tracker</a>
                                     </div>
                                 </div>
                             </div>
