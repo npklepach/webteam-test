@@ -15,6 +15,7 @@ body {
   --mid-grey-text: hsla(0, 0%, 100%, .5);
   --grey-active-list-item: #f1f1f1;
   --text-grey: rgba(39, 40, 44, .7);
+  --title-grey: #27282c;
 }
 
 .example-for-breakpoints {
@@ -92,6 +93,24 @@ body {
   background-color: white;
 }
 
+.wt-section {
+  padding-bottom: 96px;
+
+  @media (--sm) {
+    padding-bottom: 64px;
+  }
+}
+
+#section-toolbox-app {
+  padding-bottom: 0;
+
+  @media (--sm) {
+    padding-bottom: 64px;
+  }
+}
+
+/* Toolbox screenshot? */
+
 .site-menu {
   border-bottom: solid var(--gray-color) 1px;
   background-color: white;
@@ -115,20 +134,53 @@ a {
   }
 }
 
-#desktop-menu-title {
+h1 {
+  font-size: 60px;
+  line-height: 64px;
+  color: var(--title-grey);
+}
+
+h2 {
+  font-size: 31px;
+  line-height: 40px;
+  color: var(--title-grey);
+}
+
+h3 {
   font-size: 20px;
   line-height: 28px;
-  color: #27282c;
+  color: var(--title-grey);
+}
+
+.footer-title {
+  font-size: 15px;
+  line-height: 24px;
+  font-weight: 600;
+
+  &_theme_dark {
+    color: white;
+  }
+}
+
+.subtitle {
+  font-size: 28px;
+  line-height: 40px;
+  color: var(--title-grey);
+
+  &_theme_dark {
+  color: white;
+}
 }
 
 #desktop-menu-button {
+  width: 134px;
+  height: 32px;
   line-height: 24px;
-  padding: 8px 35px;
+padding-top: 4px;
   text-align: center;
-  text-decoration: none;
   display: inline-block;
-  border: solid 1px var(--wt-color-grey);
-  border-radius: 24px;
+  border: solid 1px rgba(39, 40, 44, 0.4);
+  border-radius: 25px;
 
   &:link, &:visited {
     background-color: white;
@@ -140,6 +192,27 @@ a {
     background-color: var(--orange-color);
     color: white;
     border-color: var(--orange-color);
+
+    .text-2 {
+      color: white;
+    }
+  }
+}
+
+.button {
+  padding: 12px 40px;
+  text-align: center;
+  display: inline-block;
+  border-radius: 25px;
+  border: none;
+  background-color: var(--orange-color);
+
+  .text-2 {
+    color: white;
+  }
+
+  &:hover, &:active {
+    background-color: var(--light-orange-color);
   }
 }
 
@@ -153,50 +226,15 @@ a {
   }
 }
 
+.img-size {
+  max-width: 100%;
+}
+
 /* Maybe "active link" and some more info about WTH it really is? */
 
 a.n-a-active {
   color: var(--orange-color);
   font-weight: normal;
-}
-
-h1 {
-  font-size: 68px;
-}
-
-h2 {
-  font-size: 35px;
-  line-height: 42px;
-}
-
-h3 {
-  font-size: 20px;
-  line-height: 28px;
-}
-
-h5 {
-  font-size: 16px;
-  line-height: 20px;
-}
-
-.n-subtitle {
-  font-size: 29px;
-}
-
-.n-button, .n-button:link, .n-button:visited {
-  background-color: var(--orange-color);
-  color: white;
-  padding: 14px 40px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  border-radius: 24px;
-  font-weight: normal;
-  border: none;
-}
-
-.n-button:hover, .n-button:active {
-  background-color: var(--light-orange-color);
 }
 
 /* product logo? */
@@ -245,33 +283,8 @@ h5 {
   width: 48px;
 }
 
-.wt-section {
-  @media (--sm) {
-    padding-bottom: 64px;
-  }
-
-  padding-bottom: 96px;
-}
-
-.n-section {
-  @media (--sm) {
-    padding-bottom: 64px;
-  }
-
-  padding-bottom: 0;
-}
-
-/* Toolbox screenshot? */
-
-.n-img-section {
-  display: block;
-}
-
 /* nested selectors too */
 
-.n-h2_dark, .n-h5_dark {
-  color: white;
-}
 
 /* Partner logos */
 
@@ -417,16 +430,12 @@ a.n-footer-legal_link:hover, a.n-footer-legal_link:active {
   text-decoration: underline;
 }
 
-.n-img-size {
-  max-width: 100%;
-}
-
 .breakpoints-block-lg {
   @media (--sm) {
     display: none;
   }
 
-  display: flex;
+  display: block;
 }
 
 .breakpoints-block-sm {
@@ -435,14 +444,6 @@ a.n-footer-legal_link:hover, a.n-footer-legal_link:active {
   }
 
   display: none;
-}
-
-.breakpoints-block-lg-img {
-  @media (--sm) {
-    display: none;
-  }
-
-  display: initial;
 }
 
 .dropdown-content {
