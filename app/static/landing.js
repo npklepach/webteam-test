@@ -1,22 +1,22 @@
-let elements = document.getElementsByClassName("n-product-link");
+let elements = document.getElementsByClassName("product-link");
 for (let element of elements) {
   element.addEventListener("mouseenter", highlightProductLogo);
   element.addEventListener("mouseleave", removeHighlightProductLogo);
 }
 
 function highlightProductLogo(event) {
-  let elements = document.getElementsByClassName("n-logo-item");
+  let elements = document.getElementsByClassName("product-logo");
   for (let element of elements) {
     if (element.dataset.product !== event.srcElement.dataset.product) {
-      element.classList.add("n-logo-item_shade");
+      element.classList.add("product-logo_shade");
     }
   }
 }
 
 function removeHighlightProductLogo(event) {
-  let elements = document.getElementsByClassName("n-logo-item");
+  let elements = document.getElementsByClassName("product-logo");
   for (let element of elements) {
-    element.classList.remove("n-logo-item_shade");
+    element.classList.remove("product-logo_shade");
   }
 }
 

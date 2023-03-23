@@ -15,6 +15,8 @@ body {
   --mid-grey-text: hsla(0, 0%, 100%, .5);
   --grey-active-list-item: #f1f1f1;
   --text-grey: rgba(39, 40, 44, .7);
+  --text-grey-dark-theme: hsla(0, 0%, 100%, .6);
+  --legal-text-grey: rgba(255, 255, 255, 0.3);
   --title-grey: #27282c;
 }
 
@@ -69,7 +71,7 @@ body {
   color: var(--text-grey);
 
   &_theme_dark {
-    color: hsla(0, 0%, 100%, .6);
+    color: var(--text-grey-dark-theme);
   }
 }
 
@@ -79,6 +81,10 @@ body {
   font-weight: 400;
   line-height: 24px;
   color: var(--text-grey);
+
+  &_theme_dark {
+    color: var(--text-grey-dark-theme);
+  }
 }
 
 .text-3 {
@@ -109,7 +115,9 @@ body {
   }
 }
 
-/* Toolbox screenshot? */
+#section-with-border {
+  border-bottom: solid var(--gray-color) 1px;
+}
 
 .site-menu {
   border-bottom: solid var(--gray-color) 1px;
@@ -131,6 +139,23 @@ a {
 
   &:hover, &:active {
     color: var(--orange-color);
+  }
+
+  &.link_orange {
+    color: var(--orange-color);
+    font-weight: normal;
+
+    &:hover, &:active {
+      text-decoration: underline;
+    }
+  }
+
+  &.link_grey {
+    color: var(--text-grey-dark-theme);
+
+    &:hover, &:active {
+      text-decoration: underline;
+    }
   }
 }
 
@@ -230,35 +255,22 @@ padding-top: 4px;
   max-width: 100%;
 }
 
-/* Maybe "active link" and some more info about WTH it really is? */
+.product-logo {
+  margin-bottom: 48px;
 
-a.n-a-active {
-  color: var(--orange-color);
-  font-weight: normal;
-}
-
-/* product logo? */
-
-.n-logo-item {
   @media (--sm) {
     margin-bottom: initial;
     height: 48px;
     width: 48px;
   }
 
-  margin-bottom: 48px;
+  &_shade {
+    opacity: 0.3;
+    transition: 0.3s;
+  }
 }
 
-/* product logo shade? */
-
-.n-logo-item_shade {
-  opacity: 0.3;
-  transition: 0.3s;
-}
-
-/* product info tag? */
-
-.n-tag {
+.product-tag {
   @media (--sm) {
     padding: 5px 10px;
     border-radius: 4px;
@@ -270,78 +282,53 @@ a.n-a-active {
   background-color: var(--wt-color-dark-5);
 }
 
-/* what is this and how can you describe it better? */
-
-.n-content-1 {
-  border-bottom: solid var(--gray-color) 1px;
-}
-
-/* What icon and why is it "icon-2"? */
-
-.n-icon-2 {
+.benefits-icon {
   height: 48px;
   width: 48px;
 }
 
-/* nested selectors too */
-
-
-/* Partner logos */
-
-.n-logos {
-  display: flex;
+.partner-logos {
   text-align: center;
   align-items: center;
-}
 
-/* Partner logo google */
-
-.n-logo-google {
-  width: 144px;
-  height: 48px;
-}
-
-.n-logo-hp {
-  width: 70px;
-  height: 70px;
-}
-
-.n-logo-samsung {
-  width: 160px;
-  height: 53px;
-}
-
-.n-logo-salesforce {
-  width: 110px;
-  height: 77px;
-}
-
-.n-logo-expedia {
-  @media (--sm) {
-    width: 156px;
-    height: 44px;
+  &_google {
+    width: 144px;
+    height: 48px;
   }
 
-  width: 177px;
-  height: 50px;
+  &_hp {
+    width: 70px;
+    height: 70px;
+  }
+
+  &_samsung {
+    width: 160px;
+    height: 53px;
+  }
+
+  &_salesforce {
+    width: 110px;
+    height: 77px;
+  }
+
+  &_expedia {
+    @media (--sm) {
+      width: 156px;
+      height: 44px;
+    }
+
+    width: 177px;
+    height: 50px;
+  }
+
+  &_twitter {
+    width: 57px;
+    height: 46px;
+  }
 }
 
-.n-logo-twitter {
-  width: 57px;
-  height: 46px;
-}
-
-/* FAQ link */
-
-.n-link {
-  color: var(--orange-color) !important;
-  font-weight: normal !important;
-}
-
-/* download inforgraphics */
-
-.n-download {
-  font-size: 14pt;
+#download-icon {
+  padding-top: 3px;
 }
 
 #subscribe-email {
@@ -353,81 +340,61 @@ a.n-a-active {
   border: 1px solid;
   border-color: var(--gray-color);
   font-size: 16px;
-/* background-image: url("app/static/img/enter.svg"); background-position: 98%; background-repeat: no-repeat; */
   background-position: 98%;
   background-repeat: no-repeat;
 }
 
-.n-social-footer {
+.social-list {
   display: flex;
   align-items: center;
+
+  &_twitter {
+    margin-right: 16px;
+  }
+
+  &_blog {
+    margin-right: 18px;
+  }
+
+  &_bugs {
+    margin-right: 19px;
+  }
 }
 
-.n-social-footer_twitter {
-  margin-right: 16px;
-}
-
-.n-social-footer_read {
-  margin-right: 18px;
-}
-
-.n-social-footer_bug {
-  margin-right: 19px;
-}
-
-.n-footer-list_element {
-  font-size: 16px !important;
-  color: var(--light-grey-text) !important;
-  font-weight: normal !important;
-  line-height: 24px !important;
-}
-
-a.n-footer-list_element:hover, a.n-footer-list_element:active {
-  color: white !important;
-  text-decoration: underline;
-}
-
-/* replace with a class on a list or sth else */
-
-.n-footer_link {
+#social-links-list a {
   vertical-align: middle;
+
+  img {
+    vertical-align: middle;
+    margin-right: 24px !important;
+  }
 }
 
-.n-footer_icon {
-  vertical-align: middle;
-  margin-right: 24px !important;
-}
-
-.n-footer_icon_read {
+#icon-read {
   filter: invert(75.5%);
 }
 
-.n-jb-logo {
+#jb-logo-large {
   margin-top: 37px;
-}
-
-.n-footer {
-  margin-left: 3%;
-  margin-right: 3%;
 }
 
 .page-footer {
   padding-bottom: 48px;
+
+  .wt-container {
+    padding-left: 0;
+    padding-right: 0;
+  }
 }
 
-.n-footer-legal_element {
-  font-size: 16px;
-  color: var(--mid-grey-text);
-}
+.footer-legal {
+  &_text {
+    color: var(--legal-text-grey);
+  }
 
-.n-footer-legal_link {
-  font-size: 16px !important;
-  color: white !important;
-  font-weight: normal !important;
-}
-
-a.n-footer-legal_link:hover, a.n-footer-legal_link:active {
-  text-decoration: underline;
+  &_link {
+    color: white;
+  }
 }
 
 .breakpoints-block-lg {
